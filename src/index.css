@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #900C3F;
+    --secondary: #581845;
+    --accent: #FFC300;
+    --bg: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text: #ffffff;
+    
+    --app-bg: #0f0c29;
+    --glass: rgba(255, 255, 255, 0.1);
+    --neon-main: #00d4ff; 
+    --neon-accent: #ffcc00;
+    --neon-link: #00d4ff;
+  }
+
+  [data-theme="blue"] { 
+    --primary: #003366 !important; 
+    --secondary: #004080 !important; 
+    --accent: #00d4ff !important; 
+    --bg: #0a1128 !important; 
+    --card-bg: #1c2541 !important; 
+    --app-bg: #001529 !important; 
+    --neon-main: #00d4ff !important; 
+    --neon-accent: #ffffff !important; 
+  }
+  [data-theme="purple"] { 
+    --primary: #4b0082 !important; 
+    --secondary: #6a0dad !important; 
+    --accent: #e0b0ff !important; 
+    --bg: #120024 !important; 
+    --card-bg: #240046 !important; 
+    --app-bg: #1a0033 !important; 
+    --neon-main: #e0b0ff !important; 
+    --neon-accent: #ff00ff !important; 
+  }
+  [data-theme="gold"] { 
+    --primary: #5c4308 !important; 
+    --secondary: #8c620c !important; 
+    --accent: #ffcc00 !important; 
+    --bg: #141108 !important; 
+    --card-bg: #262110 !important; 
+    --app-bg: #1a1400 !important; 
+    --neon-main: #ffcc00 !important; 
+    --neon-accent: #fffacd !important; 
+  }
+  [data-theme="green"] { 
+    --primary: #1b4d3e !important; 
+    --secondary: #2e8b57 !important; 
+    --accent: #98fb98 !important; 
+    --bg: #0b1a15 !important; 
+    --card-bg: #16352b !important; 
+    --app-bg: #001a00 !important; 
+    --neon-main: #39ff14 !important; 
+    --neon-accent: #ccff00 !important; 
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px var(--neon-main);
+  }
+  .text-glow-accent {
+    text-shadow: 0 0 10px var(--neon-accent);
+  }
+  .box-glow {
+    box-shadow: 0 0 8px var(--neon-main);
+  }
+}

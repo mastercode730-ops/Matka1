@@ -48,7 +48,7 @@ const GuessingCard = ({ gameName, guesserName, date, followers, single, main, su
     </div>
     
     <div className="p-[8px] text-center bg-black/10">
-        <a href="#" className="bg-[#24A1DE] text-white block p-[8px] rounded-[5px] font-bold text-[14px] no-underline">
+        <a href="https://wa.me/917589045547" className="bg-[#24A1DE] text-white block p-[8px] rounded-[5px] font-bold text-[14px] no-underline">
             ✈️ PLAY ONLINE GAME CLICK HERE
         </a>
     </div>

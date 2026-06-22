@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ChartLink = ({ text }) => (
-  <a href="#" className="bg-white text-black block my-[8px] p-[12px] no-underline font-bold text-[10px] rounded-[50px] border-[2px] border-[#000080] shadow-[0_2px_5px_rgba(0,0,0,0.2)] transition duration-300 uppercase hover:bg-[#f0f0f0] hover:scale-105">
+  <a href="https://wa.me/917589045547" className="bg-white text-black block my-[8px] p-[12px] no-underline font-bold text-[10px] rounded-[50px] border-[2px] border-[#000080] shadow-[0_2px_5px_rgba(0,0,0,0.2)] transition duration-300 uppercase hover:bg-[#f0f0f0] hover:scale-105">
     {text}
   </a>
 );

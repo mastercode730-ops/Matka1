@@ -10,7 +10,7 @@ const NoticeBoard = () => {
         </div>
         
         <div className="flex justify-between gap-[10px]">
-          <a href="#" className="flex-1 p-[12px] rounded-[8px] no-underline text-white font-bold text-[13px] flex items-center justify-center uppercase transition-transform duration-300 hover:scale-95 bg-[linear-gradient(45deg,#0088cc,#00a2ed)] shadow-[0_4px_10px_rgba(0,136,204,0.3)]">
+          <a href="https://wa.me/917589045547" className="flex-1 p-[12px] rounded-[8px] no-underline text-white font-bold text-[13px] flex items-center justify-center uppercase transition-transform duration-300 hover:scale-95 bg-[linear-gradient(45deg,#0088cc,#00a2ed)] shadow-[0_4px_10px_rgba(0,136,204,0.3)]">
             <span className="mr-[5px]">✈️</span> TELEGRAM
           </a>
           

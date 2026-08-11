@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════
    MATKA SATTA ONLINE — Wave Dham Theme (inspired by sattazon.shop)
-   Modern Minimalist White × Sunset Gradient Hero × Wave Divider × WhatsApp
+   Modern Minimalist White × Sunset Gradient Hero × 100% Fully Responsive
    ════════════════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap');
@@ -27,14 +27,20 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   background: var(--page);
   color: var(--ink);
   font-family: var(--font-main);
   font-size: 15px;
   line-height: 1.55;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -43,6 +49,7 @@ a {
 }
 
 .wrap {
+  width: 100%;
   max-width: 1020px;
   margin: 0 auto;
   padding: 0 16px;
@@ -75,6 +82,7 @@ a {
 .btn-wa-wave {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 8px 18px;
   background: var(--wa);
@@ -86,6 +94,7 @@ a {
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
   transition: transform 0.2s ease;
+  white-space: nowrap;
 }
 
 .btn-wa-wave:hover {
@@ -94,49 +103,49 @@ a {
 }
 
 .wa-wave-banner {
-  margin: 20px 0;
-  padding: 16px 20px;
+  margin: 16px 0;
+  padding: 14px 18px;
   background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
   border: 1.5px solid #86efac;
-  border-radius: 16px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .wa-wave-title {
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   font-weight: 800;
   color: #14532d;
 }
 
 .wa-wave-sub {
-  font-size: 13px;
+  font-size: clamp(11px, 2vw, 13px);
   color: #166534;
   margin-top: 2px;
 }
 
 .floating-wa {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 16px;
+  left: 14px;
   z-index: 50;
 }
 
 .wave-fab-wa {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 22px;
+  gap: 6px;
+  padding: 10px 18px;
   background: var(--wa);
   border: none;
   border-radius: 999px;
   color: #ffffff !important;
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(37, 211, 102, 0.5);
@@ -155,22 +164,23 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px 14px;
-  padding: 10px 16px;
+  gap: 6px 12px;
+  padding: 8px 12px;
   background: linear-gradient(135deg, #8e0f16 0%, #c0161f 50%, #8e0f16 100%);
   border-bottom: 3px solid #ffcc00;
   color: #ffffff;
   text-align: center;
+  font-size: 14px;
 }
 
 .lrs-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 10px;
+  padding: 2px 8px;
   background: rgba(0, 0, 0, 0.28);
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -182,6 +192,7 @@ a {
   background: #43e660;
   border-radius: 50%;
   animation: lrsBlink 1.2s infinite;
+  flex-shrink: 0;
 }
 
 @keyframes lrsBlink {
@@ -190,21 +201,21 @@ a {
 }
 
 .lrs-game {
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   font-weight: 800;
 }
 
 .lrs-time {
   color: #ffd9a0;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .lrs-num {
-  padding: 2px 14px;
+  padding: 2px 12px;
   background: #ffcc00;
   border-radius: 6px;
   color: #7a0d12;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -215,9 +226,11 @@ a {
   z-index: 40;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 20px;
-  background: rgba(255, 255, 255, 0.95);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
@@ -225,32 +238,33 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
+  gap: 8px;
+  font-size: clamp(15px, 3vw, 18px);
   font-weight: 900;
   letter-spacing: -0.3px;
   color: var(--ink);
 }
 
 .logo-dot {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
   background: linear-gradient(135deg, var(--o1), var(--o3));
+  flex-shrink: 0;
 }
 
 .topbar nav {
   display: flex;
-  gap: 6px;
-  margin-left: auto;
+  gap: 4px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .topbar nav a {
-  padding: 7px 14px;
-  border-radius: 8px;
+  padding: 5px 10px;
+  border-radius: 6px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   transition: all 0.2s ease;
 }
@@ -266,18 +280,19 @@ a {
 }
 
 .btn-live-pill {
-  padding: 7px 16px;
+  padding: 5px 12px;
   background: var(--green);
   border-radius: 999px;
   color: #ffffff !important;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 /* ── Sunset Hero Section with Organic SVG Wave ─────────── */
 .hero {
   position: relative;
-  padding: 44px 16px 90px;
+  padding: 32px 16px 70px;
   background: linear-gradient(135deg, var(--o1) 0%, var(--o2) 55%, var(--o3) 100%);
   color: #ffffff;
   text-align: center;
@@ -293,40 +308,39 @@ a {
 
 .hero-chip {
   display: inline-block;
-  margin-bottom: 12px;
-  padding: 6px 18px;
+  margin-bottom: 10px;
+  padding: 4px 14px;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.4px;
 }
 
 .hero-date {
   margin-bottom: 4px;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.95;
 }
 
 .hero-hindi {
-  margin-bottom: 18px;
-  font-size: 15px;
+  margin-bottom: 12px;
+  font-size: 14px;
   font-weight: 600;
   opacity: 0.95;
 }
 
 .hero-game {
-  font-size: 34px;
+  font-size: clamp(26px, 6vw, 36px);
   font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .hero-number {
-  margin: 4px 0 16px;
+  margin: 4px 0 14px;
   font-family: var(--font-mono);
-  font-size: 80px;
+  font-size: clamp(52px, 14vw, 80px);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
@@ -338,14 +352,15 @@ a {
 
 .hero-cta {
   display: inline-block;
-  padding: 10px 24px;
+  padding: 8px 20px;
   background: #ffffff;
   border-radius: 999px;
   color: #c2410c;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease;
+  white-space: nowrap;
 }
 
 .hero-cta:hover {
@@ -357,43 +372,45 @@ a {
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   pointer-events: none;
 }
 
 /* ── Results Table Card ─────────────────────────────────── */
 .section-heading {
-  margin: 32px 0 6px;
-  font-size: 24px;
+  margin: 24px 0 4px;
+  font-size: clamp(18px, 4vw, 24px);
   font-weight: 800;
   color: var(--ink);
 }
 
 .section-sub {
   color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 18px;
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin-bottom: 14px;
 }
 
 .result-card {
   background: var(--page);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 14px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   overflow-x: auto;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .result-table {
   width: 100%;
+  min-width: 500px;
   border-collapse: collapse;
 }
 
 .result-table th {
-  padding: 14px 16px;
+  padding: 12px 14px;
   background: var(--soft);
   border-bottom: 1px solid var(--line);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
@@ -402,7 +419,7 @@ a {
 }
 
 .result-table td {
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--line);
   vertical-align: middle;
 }
@@ -417,19 +434,19 @@ a {
 
 .g-name {
   font-weight: 800;
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   color: var(--ink);
 }
 
 .g-time {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
 }
 
 .cell-prev {
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--muted);
 }
@@ -442,14 +459,14 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  height: 36px;
-  padding: 0 10px;
+  min-width: 40px;
+  height: 34px;
+  padding: 0 8px;
   background: linear-gradient(135deg, rgba(255, 110, 61, 0.15), rgba(247, 70, 111, 0.15));
   border: 1px solid rgba(255, 110, 61, 0.4);
   border-radius: 8px;
   color: #e11d48;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -457,22 +474,24 @@ a {
   background: var(--soft);
   border-color: var(--line);
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* ── Monthly & Annual Chart Tables ──────────────────────── */
 .chart-card-clean {
   background: var(--page);
   border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 16px 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wave-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
   font-family: var(--font-mono);
   font-size: 13px;
@@ -480,15 +499,16 @@ a {
 }
 
 .wave-table th {
-  padding: 12px 8px;
+  padding: 10px 6px;
   background: var(--soft);
   border-bottom: 2px solid var(--line);
   color: var(--ink);
   font-weight: 800;
+  font-size: 12px;
 }
 
 .wave-table td {
-  padding: 9px 6px;
+  padding: 8px 4px;
   border: 1px solid var(--line);
   color: var(--muted);
 }
@@ -507,19 +527,19 @@ a {
 .wave-nav-btns {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 16px;
   flex-wrap: wrap;
 }
 
 .wave-btn {
-  padding: 8px 18px;
+  padding: 7px 16px;
   background: var(--soft);
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--ink);
   font-family: var(--font-main);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -535,27 +555,27 @@ a {
 /* ── Footer ─────────────────────────────────────────────── */
 .wave-footer {
   text-align: center;
-  padding: 30px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--line);
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .wave-footer select {
-  padding: 8px 16px;
+  padding: 6px 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--soft);
   font-family: var(--font-main);
-  font-size: 14px;
-  margin: 0 4px;
+  font-size: 13px;
+  margin: 4px 3px;
   outline: none;
 }
 
 /* ── Floating FAB ───────────────────────────────────────── */
 .floating-bar {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 16px;
+  right: 14px;
   z-index: 50;
 }
 
@@ -563,18 +583,30 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 22px;
+  padding: 10px 18px;
   background: linear-gradient(135deg, var(--o1), var(--o3));
   border: none;
   border-radius: 999px;
   color: #ffffff;
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(255, 106, 61, 0.4);
 }
 
-.wave-fab:hover {
-  transform: translateY(-2px);
+@media (max-width: 480px) {
+  .topbar {
+    padding: 8px 12px;
+  }
+  .topbar nav {
+    width: 100%;
+    justify-content: space-around;
+    order: 3;
+    margin-top: 4px;
+  }
+  .wa-wave-banner {
+    flex-direction: column;
+    text-align: center;
+  }
 }

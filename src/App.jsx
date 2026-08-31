@@ -182,7 +182,7 @@ export default function App() {
         </nav>
         <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
           <a
-            href="https://www.Gabbar247.vipa.online/"
+            href="https://www.Gabbar247.vip"
             style={{
               padding: "5px 12px",
               background: "var(--ink)",

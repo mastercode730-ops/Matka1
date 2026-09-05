@@ -3,14 +3,14 @@ import React from 'react';
 const Footer = () => (
   <div className="bg-black/40 p-[20px_10px] mt-[30px] border-t-2 border-[var(--neon-main)] rounded-t-[30px] text-center font-rajdhani">
     <div className="flex justify-center gap-[15px] mb-[20px]">
-      <a href="https://wa.me/917589045547" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20">PRIVACY POLICY</a>
-      <a href="https://wa.me/917589045547" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20">DISCLAIMER</a>
+      <a href="https://wa.me/918360750829" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20">PRIVACY POLICY</a>
+      <a href="https://wa.me/918360750829" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20">DISCLAIMER</a>
     </div>
 
     <div className="mb-[15px]">
       {["Satta king", "Satta result", "Satta king 2019", "vip satta king", "Satta king up", "Satta live result", "Satta number", "Satta leak number"].map((link, i) => (
         <React.Fragment key={i}>
-          <a href="https://wa.me/917589045547" className="text-[var(--neon-link)] no-underline text-[13px] font-semibold m-[0_5px] inline-block p-[5px] hover:underline">{link}</a>
+          <a href="https://wa.me/918360750829" className="text-[var(--neon-link)] no-underline text-[13px] font-semibold m-[0_5px] inline-block p-[5px] hover:underline">{link}</a>
           {i !== 7 && <span className="text-white/50">|</span>}
         </React.Fragment>
       ))}
@@ -23,9 +23,9 @@ const Footer = () => (
     </div>
 
     <div className="grid grid-cols-3 gap-[10px] mt-[20px]">
-      <a href="https://wa.me/917589045547" className="bg-[linear-gradient(to_bottom,var(--neon-main),var(--secondary))] p-[12px_5px] rounded-[15px] no-underline text-white text-[11px] font-bold text-center shadow-[0_4px_8px_rgba(0,0,0,0.3)]">SATTAKING</a>
-      <a href="https://wa.me/917589045547" className="bg-[linear-gradient(to_bottom,var(--neon-main),var(--secondary))] p-[12px_5px] rounded-[15px] no-underline text-white text-[11px] font-bold text-center shadow-[0_4px_8px_rgba(0,0,0,0.3)]">TODAY SATTA</a>
-      <a href="https://wa.me/917589045547" className="bg-[linear-gradient(to_bottom,var(--neon-main),var(--secondary))] p-[12px_5px] rounded-[15px] no-underline text-white text-[11px] font-bold text-center shadow-[0_4px_8px_rgba(0,0,0,0.3)]">SATTA RESULT</a>
+      <a href="https://wa.me/918360750829" className="bg-[linear-gradient(to_bottom,var(--neon-main),var(--secondary))] p-[12px_5px] rounded-[15px] no-underline text-white text-[11px] font-bold text-center shadow-[0_4px_8px_rgba(0,0,0,0.3)]">SATTAKING</a>
+      <a href="https://wa.me/918360750829" className="bg-[linear-gradient(to_bottom,var(--neon-main),var(--secondary))] p-[12px_5px] rounded-[15px] no-underline text-white text-[11px] font-bold text-center shadow-[0_4px_8px_rgba(0,0,0,0.3)]">TODAY SATTA</a>
+      <a href="https://wa.me/918360750829" className="bg-[linear-gradient(to_bottom,var(--neon-main),var(--secondary))] p-[12px_5px] rounded-[15px] no-underline text-white text-[11px] font-bold text-center shadow-[0_4px_8px_rgba(0,0,0,0.3)]">SATTA RESULT</a>
     </div>
   </div>
 );

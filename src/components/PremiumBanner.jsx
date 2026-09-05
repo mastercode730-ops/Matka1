@@ -7,7 +7,7 @@ const PremiumBanner = () => {
         <h5 className="font-orbitron text-[20px] text-[var(--neon-accent)] text-glow-accent m-0 tracking-[2px]">
           ★ PREMIUM SATTA ★
         </h5>
-        <a href="https://wa.me/917589045547" className="text-[var(--neon-link)] no-underline font-bold block mt-1">
+        <a href="https://wa.me/918360750829" className="text-[var(--neon-link)] no-underline font-bold block mt-1">
           SHYAM-MATKA.COM
         </a>
       </div>

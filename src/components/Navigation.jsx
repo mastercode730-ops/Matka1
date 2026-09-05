@@ -4,8 +4,8 @@ const Navigation = () => {
   return (
     <div className="bg-bg p-[1px] transition-colors duration-300">
       <div className="grid grid-cols-4 gap-2 w-full mb-4 mt-2 px-2">
-        <NavItem title="HOME" href="https://wa.me/917589045547" />
-        <NavItem title="POINT LIST CHECK" href="https://wa.me/917589045547" />
+        <NavItem title="HOME" href="https://wa.me/918360750829" />
+        <NavItem title="POINT LIST CHECK" href="https://wa.me/918360750829" />
         <NavItem title="REGISTER GUESSING" href="https://www.Gabbar247.vip" />
         <NavItem title="LOGIN" href="https://www.Gabbar247.vip" />
       </div>

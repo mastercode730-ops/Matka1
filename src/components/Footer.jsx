@@ -2,9 +2,10 @@ import React from 'react';
 
 const Footer = () => (
   <div className="bg-black/40 p-[20px_10px] mt-[30px] border-t-2 border-[var(--neon-main)] rounded-t-[30px] text-center font-rajdhani">
-    <div className="flex justify-center gap-[15px] mb-[20px]">
-      <a href="https://wa.me/918360750829" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20">PRIVACY POLICY</a>
-      <a href="https://wa.me/918360750829" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20">DISCLAIMER</a>
+    <div className="flex justify-center flex-wrap gap-[15px] mb-[20px]">
+      <a href="#privacy" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20 hover:bg-white/20 transition-all">PRIVACY POLICY</a>
+      <a href="#terms" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20 hover:bg-white/20 transition-all">TERMS &amp; CONDITIONS</a>
+      <a href="#disclaimer" className="bg-white/10 p-[8px_15px] rounded-[10px] text-white no-underline text-[12px] border border-white/20 hover:bg-white/20 transition-all">DISCLAIMER</a>
     </div>
 
     <div className="mb-[15px]">

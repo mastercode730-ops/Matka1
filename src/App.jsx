@@ -6,6 +6,9 @@ import {
   SITE_DOMAIN,
 } from "./constants";
 import { fetchTodayResults, fetchMonthlyChart, fetchAnnouncement } from "./api";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndConditions from "./components/TermsAndConditions";
+import Disclaimer from "./components/Disclaimer";
 
 const MONTH_NAMES = [
   "January",
@@ -37,6 +40,38 @@ export default function App() {
   );
   const [chartData, setChartData] = useState(null);
   const [announcement, setAnnouncement] = useState(null);
+  const [activePage, setActivePage] = useState(() => {
+    const hash = window.location.hash.toLowerCase();
+    if (hash === "#privacy") return "privacy";
+    if (hash === "#terms") return "terms";
+    if (hash === "#disclaimer") return "disclaimer";
+    return "home";
+  });
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === "#privacy") setActivePage("privacy");
+      else if (hash === "#terms") setActivePage("terms");
+      else if (hash === "#disclaimer") setActivePage("disclaimer");
+      else if (hash === "" || hash === "#" || hash === "#home" || hash === "#results" || hash === "#monthly-chart") {
+        setActivePage("home");
+      }
+    };
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
+  const navigateTo = (page, e) => {
+    if (e) e.preventDefault();
+    setActivePage(page);
+    if (page === "home") {
+      window.history.pushState(null, "", window.location.pathname);
+    } else {
+      window.location.hash = page;
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Fetch today results from backend API
   const loadResults = useCallback(async () => {
@@ -166,11 +201,46 @@ export default function App() {
           <span>{SITE_NAME}</span>
         </div>
         <nav>
-          <a href="/" className="active">
+          <a
+            href="#home"
+            className={activePage === "home" ? "active" : ""}
+            onClick={(e) => navigateTo("home", e)}
+          >
             होम
           </a>
-          <a href="#results">रिजल्ट</a>
-          <a href="#monthly-chart">रिकॉर्ड चार्ट</a>
+          <a
+            href="#results"
+            onClick={(e) => {
+              if (activePage !== "home") {
+                navigateTo("home", e);
+                setTimeout(() => {
+                  document.getElementById("results")?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }
+            }}
+          >
+            रिजल्ट
+          </a>
+          <a
+            href="#monthly-chart"
+            onClick={(e) => {
+              if (activePage !== "home") {
+                navigateTo("home", e);
+                setTimeout(() => {
+                  document.getElementById("monthly-chart")?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }
+            }}
+          >
+            रिकॉर्ड चार्ट
+          </a>
+          <a
+            href="#disclaimer"
+            className={activePage === "disclaimer" ? "active" : ""}
+            onClick={(e) => navigateTo("disclaimer", e)}
+          >
+            अस्वीकरण
+          </a>
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -230,8 +300,19 @@ export default function App() {
         </div>
       )}
 
+      {/* ── CONDITIONAL VIEW: LEGAL PAGES ── */}
+      {activePage === "privacy" && (
+        <PrivacyPolicy onBack={() => navigateTo("home")} />
+      )}
+      {activePage === "terms" && (
+        <TermsAndConditions onBack={() => navigateTo("home")} />
+      )}
+      {activePage === "disclaimer" && (
+        <Disclaimer onBack={() => navigateTo("home")} />
+      )}
+
       {/* ── SUNSET WAVE HERO SECTION ── */}
-      {heroGame && (
+      {activePage === "home" && heroGame && (
         <section className="hero">
           <div className="hero-inner">
             <span className="hero-chip">&#9210; सुपरफास्ट लाइव रिजल्ट</span>
@@ -287,7 +368,8 @@ export default function App() {
         </section>
       )}
 
-      <div className="wrap">
+      {activePage === "home" && (
+        <div className="wrap">
         {/* ── WHATSAPP CALLOUT BANNER ── */}
         <div className="wa-wave-banner">
           <div>
@@ -479,9 +561,62 @@ export default function App() {
             </div>
           </div>
         </section>
+      </div>
+      )}
 
-        {/* ── FOOTER ── */}
+      {/* ── FOOTER (ON ALL PAGES) ── */}
+      <div className="wrap">
         <footer className="wave-footer">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: "12px",
+              alignItems: "center",
+              marginBottom: "16px",
+            }}
+          >
+            <a
+              href="#privacy"
+              onClick={(e) => navigateTo("privacy", e)}
+              style={{
+                color: activePage === "privacy" ? "var(--o2)" : "#2563eb",
+                fontSize: "13px",
+                fontWeight: 600,
+                textDecoration: "underline",
+              }}
+            >
+              Privacy Policy
+            </a>
+            <span style={{ color: "#d1d5db" }}>•</span>
+            <a
+              href="#terms"
+              onClick={(e) => navigateTo("terms", e)}
+              style={{
+                color: activePage === "terms" ? "var(--o2)" : "#2563eb",
+                fontSize: "13px",
+                fontWeight: 600,
+                textDecoration: "underline",
+              }}
+            >
+              Terms &amp; Conditions
+            </a>
+            <span style={{ color: "#d1d5db" }}>•</span>
+            <a
+              href="#disclaimer"
+              onClick={(e) => navigateTo("disclaimer", e)}
+              style={{
+                color: activePage === "disclaimer" ? "var(--o2)" : "#2563eb",
+                fontSize: "13px",
+                fontWeight: 600,
+                textDecoration: "underline",
+              }}
+            >
+              Disclaimer
+            </a>
+          </div>
+
           <p style={{ color: "var(--muted)", marginBottom: 12 }}>
             {SITE_NAME} &bull; {SITE_DOMAIN} &bull; ALL RIGHTS RESERVED 2026
           </p>

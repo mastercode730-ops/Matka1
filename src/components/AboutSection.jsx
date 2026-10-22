@@ -6,6 +6,9 @@ const AboutSection = () => (
       <h5 className="text-black text-[20px] font-bold mt-0 mb-[12px] uppercase tracking-[0.5px] flex items-center gap-[8px]">
         About SHYAM-MATKA.COM (SATTA KING)
       </h5>
+
+
+      
       <hr className="border-0 h-[2px] bg-[linear-gradient(90deg,#ccc,transparent)] mb-[15px]" />
       <p className="text-[10px] leading-[1.8] text-black m-0 text-justify">
         SHYAM-MATKA.COM में आपका स्वागत है हमारी वेबसाइट बाजार की अग्रणी वेबसाइटों में से एक है...
